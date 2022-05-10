@@ -1,1 +1,1 @@
-[]
+[{"title":"lapicera","price":30,"thumbnail":"https://artelibre.com.ar/images/LAPICERA%20BIC%20CRISTAL%20NEGRO%20FINO.jpg","id":1},{"title":"cuaderno","price":80,"thumbnail":"https://png.pngtree.com/png-vector/20190214/ourlarge/pngtree-vector-spiral-notebook-icon-png-image_509658.jpg","id":2},{"title":"lapiz","price":15,"thumbnail":"https://w7.pngwing.com/pngs/6/56/png-transparent-pencil-drawing-by-eraser-pencil-orange-by.png","id":3}]
