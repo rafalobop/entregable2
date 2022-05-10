@@ -1,8 +1,6 @@
 const express = require('express')
 const app = express()
 const fs = require('fs')
-const { filter } = require('minimatch')
-const Contenedor = require('./class')
 
 
 app.get('/productos', async (req, res) => {
@@ -18,12 +16,14 @@ app.get('/productos', async (req, res) => {
 app.get('/productoRandom', async (req, res) => {
     const products = await fs.promises.readFile('productos.txt')
     const productsParsed = JSON.parse(products)
-    const randomNumber = Math.round((Math.random()*3))
+    let randomNumber = Math.round((Math.random()*3))
     if(randomNumber === 0){
-        randomNumber++
+        while(randomNumber <= 3){
+            randomNumber++
+        break;
+        }
     }
     const filterRandom = productsParsed.find((x)=> x.id === randomNumber)
-    console.log(filterRandom)
     res.send({
         msg: 'Productos encontrados',
         products: filterRandom,
